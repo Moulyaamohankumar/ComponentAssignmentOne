@@ -33,8 +33,18 @@ function App() {
       author: 'Michael Brown',
     },
   ];
-
-  return <>{/* write code to display all the books using */}</>;
+ const App = () => {
+    return (
+      <div className="p-6">
+        <h1 className="text-2xl font-bold mb-4">Book List</h1>
+        <div className="grid grid-cols-3 gap-4">
+          {books.map((books) => (
+            <BookCard key={books.id} books={books} />
+          ))}
+        </div>
+      </div>
+    );
+  };
 }
 
 export default App;
